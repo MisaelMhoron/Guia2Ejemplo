@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.missa.guia2ejemplo.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/txtURL"
+            android:gravity="center"
+            android:hint="Inserta la URL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="86dp" >
+
+            <RadioButton
+                android:id="@+id/btnCambiar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cambiar nombre del archivo" />
+
+            <RadioButton
+                android:id="@+id/btnNoCmabiar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No cambiar nombre" />
+        </RadioGroup>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop= "true"
+            android:layout_centerHorizontal = "true"
+            android:layout_marginTop="20dp"
+
+            android:indeterminate="false"
+            android:max="100"
+
+            android:minHeight="50dp"
+            android:minWidth="500dp"
+            android:progress="1"/>
+
+        <TextView
+            android:id="@+id/lblEstado"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below= "@+id/progressBar"
+            android:text="Estado"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btnDescargar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Descargar" />
+    </LinearLayout>
+</RelativeLayout>
